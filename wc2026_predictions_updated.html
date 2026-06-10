@@ -1487,5 +1487,45 @@
   Generated June 10, 2026 · Tournament opens June 11, 2026
 </footer>
 
+
+<!-- WC2026 Live Results Overlay — auto-injected, do not remove -->
+<script id="wc-live-overlay">
+(function() {
+  fetch('results.json?v=' + Date.now())
+    .then(function(r) { return r.json(); })
+    .then(function(results) {
+      if (!results || !Object.keys(results).length) return;
+      var updated = 0;
+      // Group stage: <tr><td>date</td><td>Home vs Away</td><td><span class="score-badge">X-Y</span></td></tr>
+      document.querySelectorAll('tr').forEach(function(row) {
+        var cells = row.querySelectorAll('td');
+        if (cells.length < 3) return;
+        var matchText = cells[1].textContent.trim();
+        if (!matchText.includes(' vs ')) return;
+        var actual = results[matchText];
+        if (!actual) return;
+        var badge = cells[2].querySelector('.score-badge');
+        if (!badge) return;
+        var predicted = badge.textContent.trim();
+        var actualStr = actual.home + '\u20130' + actual.away;  // en-dash
+        var actualDisp = actual.home + '\u2013' + actual.away;
+        var hit = predicted === actualDisp;
+        badge.style.cssText = 'display:inline-flex;align-items:center;gap:6px';
+        badge.innerHTML =
+          '<span style="opacity:0.45;font-size:0.85em;text-decoration:line-through" title="Predicted">' + predicted + '</span>' +
+          '<span style="color:' + (hit ? '#4ade80' : '#f87171') + ';font-weight:700" title="Actual">' + actualDisp + (hit ? ' \u2713' : '') + '</span>';
+        updated++;
+      });
+      if (updated > 0) {
+        var note = document.createElement('div');
+        note.style.cssText = 'position:fixed;bottom:16px;right:16px;background:rgba(0,0,0,0.75);border:1px solid rgba(74,222,128,0.5);color:#4ade80;padding:8px 14px;border-radius:8px;font-size:12px;z-index:9999;pointer-events:none';
+        note.textContent = '\u26bd ' + updated + ' live result' + (updated > 1 ? 's' : '') + ' loaded';
+        document.body.appendChild(note);
+        setTimeout(function() { note.remove(); }, 5000);
+      }
+    })
+    .catch(function() {}); // silent fail — results.json may not exist yet
+})();
+</script>
 </body>
 </html>
