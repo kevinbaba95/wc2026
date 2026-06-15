@@ -478,7 +478,22 @@
     .groups-grid, .bracket-grid { grid-template-columns: 1fr; }
     .player-card { flex-direction: column; gap: 8px; }
   }
-</style>
+
+  .scorecard-section { margin: 2rem 0; }
+  .scorecard-section h2 { margin-bottom: 0.5rem; }
+  .section-subtitle { color: var(--muted); font-size: 0.9rem; margin-bottom: 1rem; }
+  .scorecard-legend { margin-bottom: 1rem; font-size: 0.85rem; }
+  .scorecard-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+  .scorecard-table th, .scorecard-table td { padding: 6px 10px; border-bottom: 1px solid var(--border); text-align: left; }
+  .scorecard-table .pred-score, .scorecard-table .actual-score { font-family: var(--mono); font-weight: bold; text-align: center; }
+  .scorecard-table .pts-cell { text-align: center; font-weight: bold; }
+  .pts-exact { color: #4ade80; }
+  .pts-result { color: #facc15; }
+  .pts-wrong { color: #f87171; }
+  .pts-tbd { color: var(--muted); }
+  .scorecard-summary { margin-top: 1rem; font-size: 0.9rem; color: var(--muted); }
+
+  </style>
 </head>
 <body>
 
@@ -775,8 +790,8 @@
           <tbody>
             <tr><td>Jun 11</td><td>Mexico vs South Africa</td><td><span class="score-badge">2–0</span></td></tr>
             <tr><td>Jun 11</td><td>South Korea vs Czech Republic</td><td><span class="score-badge">2–0</span></td></tr>
-            <tr><td>Jun 18</td><td>Czech Republic vs South Africa</td><td><span class="score-badge">1–0</span></td></tr>
-            <tr><td>Jun 18</td><td>Mexico vs South Korea</td><td><span class="score-badge">1–1</span></td></tr>
+            <tr><td>Jun 18</td><td>Czech Republic vs South Africa</td><td>2–1</td></tr>
+            <tr><td>Jun 18</td><td>Mexico vs South Korea</td><td>2–0</td></tr>
             <tr><td>Jun 24</td><td>Mexico vs Czech Republic</td><td><span class="score-badge">3–0</span></td></tr>
             <tr><td>Jun 24</td><td>South Africa vs South Korea</td><td><span class="score-badge">1–2</span></td></tr>
           </tbody>
@@ -807,8 +822,8 @@
           <tbody>
             <tr><td>Jun 12</td><td>Canada vs Bosnia & Herzegovina</td><td><span class="score-badge">2–0</span></td></tr>
             <tr><td>Jun 13</td><td>Qatar vs Switzerland</td><td><span class="score-badge">0–3</span></td></tr>
-            <tr><td>Jun 18</td><td>Switzerland vs Bosnia & Herzegovina</td><td><span class="score-badge">2–0</span></td></tr>
-            <tr><td>Jun 18</td><td>Canada vs Qatar</td><td><span class="score-badge">2–0</span></td></tr>
+            <tr><td>Jun 18</td><td>Switzerland vs Bosnia & Herzegovina</td><td>2–1</td></tr>
+            <tr><td>Jun 18</td><td>Canada vs Qatar</td><td>2–0</td></tr>
             <tr><td>Jun 24</td><td>Canada vs Switzerland</td><td><span class="score-badge">1–2</span></td></tr>
             <tr><td>Jun 24</td><td>Bosnia & Herzegovina vs Qatar</td><td><span class="score-badge">2–1</span></td></tr>
           </tbody>
@@ -840,8 +855,8 @@
           <tbody>
             <tr><td>Jun 13</td><td>Brazil vs Morocco</td><td><span class="score-badge">1–0</span></td></tr>
             <tr><td>Jun 13</td><td>Haiti vs Scotland</td><td><span class="score-badge">0–2</span></td></tr>
-            <tr><td>Jun 19</td><td>Scotland vs Morocco</td><td><span class="score-badge">0–2</span></td></tr>
-            <tr><td>Jun 19</td><td>Brazil vs Haiti</td><td><span class="score-badge">4–0</span></td></tr>
+            <tr><td>Jun 19</td><td>Scotland vs Morocco</td><td>0–2</td></tr>
+            <tr><td>Jun 19</td><td>Brazil vs Haiti</td><td>4–0</td></tr>
             <tr><td>Jun 24</td><td>Scotland vs Brazil</td><td><span class="score-badge">0–3</span></td></tr>
             <tr><td>Jun 24</td><td>Morocco vs Haiti</td><td><span class="score-badge">4–0</span></td></tr>
           </tbody>
@@ -872,8 +887,8 @@
           <tbody>
             <tr><td>Jun 12</td><td>USA vs Paraguay</td><td><span class="score-badge">2–1</span></td></tr>
             <tr><td>Jun 13</td><td>Australia vs Turkey</td><td><span class="score-badge">2–1</span></td></tr>
-            <tr><td>Jun 19</td><td>USA vs Australia</td><td><span class="score-badge">2–0</span></td></tr>
-            <tr><td>Jun 19</td><td>Turkey vs Paraguay</td><td><span class="score-badge">0–2</span></td></tr>
+            <tr><td>Jun 19</td><td>USA vs Australia</td><td>2–1</td></tr>
+            <tr><td>Jun 19</td><td>Turkey vs Paraguay</td><td>2–1</td></tr>
             <tr><td>Jun 25</td><td>USA vs Turkey</td><td><span class="score-badge">1–0</span></td></tr>
             <tr><td>Jun 25</td><td>Paraguay vs Australia</td><td><span class="score-badge">0–1</span></td></tr>
           </tbody>
@@ -904,8 +919,8 @@
           <tbody>
             <tr><td>Jun 14</td><td>Germany vs Curaçao</td><td><span class="score-badge">5–0</span></td></tr>
             <tr><td>Jun 14</td><td>Ivory Coast vs Ecuador</td><td><span class="score-badge">1–2</span></td></tr>
-            <tr><td>Jun 20</td><td>Germany vs Ivory Coast</td><td><span class="score-badge">3–1</span></td></tr>
-            <tr><td>Jun 20</td><td>Ecuador vs Curaçao</td><td><span class="score-badge">3–0</span></td></tr>
+            <tr><td>Jun 20</td><td>Germany vs Ivory Coast</td><td>3–0</td></tr>
+            <tr><td>Jun 20</td><td>Ecuador vs Curaçao</td><td>5–0</td></tr>
             <tr><td>Jun 25</td><td>Curaçao vs Ivory Coast</td><td><span class="score-badge">0–1</span></td></tr>
             <tr><td>Jun 25</td><td>Ecuador vs Germany</td><td><span class="score-badge">1–3</span></td></tr>
           </tbody>
@@ -937,8 +952,8 @@
           <tbody>
             <tr><td>Jun 14</td><td>Netherlands vs Japan</td><td><span class="score-badge">2–1</span></td></tr>
             <tr><td>Jun 14</td><td>Sweden vs Tunisia</td><td><span class="score-badge">2–0</span></td></tr>
-            <tr><td>Jun 20</td><td>Netherlands vs Sweden</td><td><span class="score-badge">3–0</span></td></tr>
-            <tr><td>Jun 20</td><td>Tunisia vs Japan</td><td><span class="score-badge">0–2</span></td></tr>
+            <tr><td>Jun 20</td><td>Netherlands vs Sweden</td><td>2–0</td></tr>
+            <tr><td>Jun 20</td><td>Tunisia vs Japan</td><td>1–2</td></tr>
             <tr><td>Jun 25</td><td>Japan vs Sweden</td><td><span class="score-badge">2–1</span></td></tr>
             <tr><td>Jun 25</td><td>Tunisia vs Netherlands</td><td><span class="score-badge">0–2</span></td></tr>
           </tbody>
@@ -969,8 +984,8 @@
           <tbody>
             <tr><td>Jun 15</td><td>Belgium vs Egypt</td><td><span class="score-badge">2–1</span></td></tr>
             <tr><td>Jun 15</td><td>Iran vs New Zealand</td><td><span class="score-badge">2–0</span></td></tr>
-            <tr><td>Jun 21</td><td>Belgium vs Iran</td><td><span class="score-badge">2–0</span></td></tr>
-            <tr><td>Jun 21</td><td>New Zealand vs Egypt</td><td><span class="score-badge">0–3</span></td></tr>
+            <tr><td>Jun 21</td><td>Belgium vs Iran</td><td>3–0</td></tr>
+            <tr><td>Jun 21</td><td>New Zealand vs Egypt</td><td>2–1</td></tr>
             <tr><td>Jun 26</td><td>Egypt vs Iran</td><td><span class="score-badge">1–1</span></td></tr>
             <tr><td>Jun 26</td><td>New Zealand vs Belgium</td><td><span class="score-badge">0–3</span></td></tr>
           </tbody>
@@ -1002,8 +1017,8 @@
           <tbody>
             <tr><td>Jun 15</td><td>Spain vs Cape Verde</td><td><span class="score-badge">4–0</span></td></tr>
             <tr><td>Jun 15</td><td>Saudi Arabia vs Uruguay</td><td><span class="score-badge">0–2</span></td></tr>
-            <tr><td>Jun 21</td><td>Spain vs Saudi Arabia</td><td><span class="score-badge">3–0</span></td></tr>
-            <tr><td>Jun 21</td><td>Uruguay vs Cape Verde</td><td><span class="score-badge">3–0</span></td></tr>
+            <tr><td>Jun 21</td><td>Spain vs Saudi Arabia</td><td>4–0</td></tr>
+            <tr><td>Jun 21</td><td>Uruguay vs Cape Verde</td><td>4–0</td></tr>
             <tr><td>Jun 26</td><td>Cape Verde vs Saudi Arabia</td><td><span class="score-badge">0–1</span></td></tr>
             <tr><td>Jun 26</td><td>Uruguay vs Spain</td><td><span class="score-badge">1–2</span></td></tr>
           </tbody>
@@ -1035,8 +1050,8 @@
           <tbody>
             <tr><td>Jun 16</td><td>France vs Senegal</td><td><span class="score-badge">2–0</span></td></tr>
             <tr><td>Jun 16</td><td>Iraq vs Norway</td><td><span class="score-badge">0–3</span></td></tr>
-            <tr><td>Jun 22</td><td>France vs Iraq</td><td><span class="score-badge">4–0</span></td></tr>
-            <tr><td>Jun 22</td><td>Norway vs Senegal</td><td><span class="score-badge">2–1</span></td></tr>
+            <tr><td>Jun 22</td><td>France vs Iraq</td><td>4–0</td></tr>
+            <tr><td>Jun 22</td><td>Norway vs Senegal</td><td>1–1</td></tr>
             <tr><td>Jun 26</td><td>Norway vs France</td><td><span class="score-badge">1–2</span></td></tr>
             <tr><td>Jun 26</td><td>Senegal vs Iraq</td><td><span class="score-badge">3–0</span></td></tr>
           </tbody>
@@ -1068,8 +1083,8 @@
           <tbody>
             <tr><td>Jun 16</td><td>Argentina vs Algeria</td><td><span class="score-badge">2–0</span></td></tr>
             <tr><td>Jun 16</td><td>Austria vs Jordan</td><td><span class="score-badge">3–0</span></td></tr>
-            <tr><td>Jun 22</td><td>Argentina vs Austria</td><td><span class="score-badge">3–1</span></td></tr>
-            <tr><td>Jun 22</td><td>Jordan vs Algeria</td><td><span class="score-badge">0–2</span></td></tr>
+            <tr><td>Jun 22</td><td>Argentina vs Austria</td><td>3–0</td></tr>
+            <tr><td>Jun 22</td><td>Jordan vs Algeria</td><td>1–2</td></tr>
             <tr><td>Jun 27</td><td>Algeria vs Austria</td><td><span class="score-badge">1–1</span></td></tr>
             <tr><td>Jun 27</td><td>Jordan vs Argentina</td><td><span class="score-badge">0–3</span></td></tr>
           </tbody>
@@ -1101,8 +1116,8 @@
           <tbody>
             <tr><td>Jun 17</td><td>Portugal vs DR Congo</td><td><span class="score-badge">3–0</span></td></tr>
             <tr><td>Jun 17</td><td>Uzbekistan vs Colombia</td><td><span class="score-badge">0–2</span></td></tr>
-            <tr><td>Jun 23</td><td>Portugal vs Uzbekistan</td><td><span class="score-badge">2–0</span></td></tr>
-            <tr><td>Jun 23</td><td>Colombia vs DR Congo</td><td><span class="score-badge">3–0</span></td></tr>
+            <tr><td>Jun 23</td><td>Portugal vs Uzbekistan</td><td>4–0</td></tr>
+            <tr><td>Jun 23</td><td>Colombia vs DR Congo</td><td>2–0</td></tr>
             <tr><td>Jun 27</td><td>Colombia vs Portugal</td><td><span class="score-badge">0–2</span></td></tr>
             <tr><td>Jun 27</td><td>DR Congo vs Uzbekistan</td><td><span class="score-badge">0–1</span></td></tr>
           </tbody>
@@ -1133,8 +1148,8 @@
           <tbody>
             <tr><td>Jun 17</td><td>England vs Croatia</td><td><span class="score-badge">2–0</span></td></tr>
             <tr><td>Jun 17</td><td>Ghana vs Panama</td><td><span class="score-badge">0–1</span></td></tr>
-            <tr><td>Jun 23</td><td>England vs Ghana</td><td><span class="score-badge">3–0</span></td></tr>
-            <tr><td>Jun 23</td><td>Panama vs Croatia</td><td><span class="score-badge">0–3</span></td></tr>
+            <tr><td>Jun 23</td><td>England vs Ghana</td><td>3–0</td></tr>
+            <tr><td>Jun 23</td><td>Panama vs Croatia</td><td>0–2</td></tr>
             <tr><td>Jun 27</td><td>Panama vs England</td><td><span class="score-badge">0–2</span></td></tr>
             <tr><td>Jun 27</td><td>Croatia vs Ghana</td><td><span class="score-badge">2–0</span></td></tr>
           </tbody>
@@ -1555,6 +1570,198 @@
   <p style="font-size: 13.5px; color: var(--muted); margin-top: 16px; line-height: 1.7;"><strong style="color: var(--text);">Key deviations from the blog methodology:</strong> Norway rated as top-8 threat (historical data severely underweights a team absent for 28 years). Brazil rated lower than #7 ranking suggests (new manager adjustment). Spain rated #1 overall despite France's official ranking. Messi's Argentina given strong form weighting despite injury concerns. Bracket-path predictions take precedence over pure Elo.</p>
 </section>
 
+
+<section id="scorecard" class="scorecard-section">
+  <h2>📊 Predicted vs Actual</h2>
+  <p class="section-subtitle">Round 1 — All 24 matches · Updated live by the score bot</p>
+  <div class="scorecard-legend">
+    <span class="pts-exact">+3</span> Exact score &nbsp;
+    <span class="pts-result">+1</span> Correct result &nbsp;
+    <span class="pts-wrong">0</span> Wrong &nbsp;
+    <span class="pts-tbd">–</span> Not played yet
+  </div>
+  <div class="table-wrap">
+    <table class="scorecard-table">
+      <thead><tr><th>Date</th><th>Match</th><th>My Pick</th><th>Actual</th><th>Pts</th></tr></thead>
+      <tbody>
+<tr data-match="Czech Republic vs South Africa">
+    <td>Jun 18</td>
+    <td>Czech Republic vs South Africa</td>
+    <td class="pred-score">2–1</td>
+    <td class="actual-score" data-actual="–">–</td>
+    <td class="pts-cell"><span class="pts-tbd">–</span></td>
+  </tr>
+<tr data-match="Switzerland vs Bosnia & Herz.">
+    <td>Jun 18</td>
+    <td>Switzerland vs Bosnia & Herz.</td>
+    <td class="pred-score">2–1</td>
+    <td class="actual-score" data-actual="–">–</td>
+    <td class="pts-cell"><span class="pts-tbd">–</span></td>
+  </tr>
+<tr data-match="Canada vs Qatar">
+    <td>Jun 19</td>
+    <td>Canada vs Qatar</td>
+    <td class="pred-score">2–0</td>
+    <td class="actual-score" data-actual="–">–</td>
+    <td class="pts-cell"><span class="pts-tbd">–</span></td>
+  </tr>
+<tr data-match="Mexico vs South Korea">
+    <td>Jun 19</td>
+    <td>Mexico vs South Korea</td>
+    <td class="pred-score">2–0</td>
+    <td class="actual-score" data-actual="–">–</td>
+    <td class="pts-cell"><span class="pts-tbd">–</span></td>
+  </tr>
+<tr data-match="USA vs Australia">
+    <td>Jun 19</td>
+    <td>USA vs Australia</td>
+    <td class="pred-score">2–1</td>
+    <td class="actual-score" data-actual="–">–</td>
+    <td class="pts-cell"><span class="pts-tbd">–</span></td>
+  </tr>
+<tr data-match="Scotland vs Morocco">
+    <td>Jun 20</td>
+    <td>Scotland vs Morocco</td>
+    <td class="pred-score">0–2</td>
+    <td class="actual-score" data-actual="–">–</td>
+    <td class="pts-cell"><span class="pts-tbd">–</span></td>
+  </tr>
+<tr data-match="Brazil vs Haiti">
+    <td>Jun 20</td>
+    <td>Brazil vs Haiti</td>
+    <td class="pred-score">4–0</td>
+    <td class="actual-score" data-actual="–">–</td>
+    <td class="pts-cell"><span class="pts-tbd">–</span></td>
+  </tr>
+<tr data-match="Turkey vs Paraguay">
+    <td>Jun 20</td>
+    <td>Turkey vs Paraguay</td>
+    <td class="pred-score">2–1</td>
+    <td class="actual-score" data-actual="–">–</td>
+    <td class="pts-cell"><span class="pts-tbd">–</span></td>
+  </tr>
+<tr data-match="Netherlands vs Sweden">
+    <td>Jun 20</td>
+    <td>Netherlands vs Sweden</td>
+    <td class="pred-score">2–0</td>
+    <td class="actual-score" data-actual="–">–</td>
+    <td class="pts-cell"><span class="pts-tbd">–</span></td>
+  </tr>
+<tr data-match="Germany vs Ivory Coast">
+    <td>Jun 20</td>
+    <td>Germany vs Ivory Coast</td>
+    <td class="pred-score">3–0</td>
+    <td class="actual-score" data-actual="–">–</td>
+    <td class="pts-cell"><span class="pts-tbd">–</span></td>
+  </tr>
+<tr data-match="Ecuador vs Curaçao">
+    <td>Jun 21</td>
+    <td>Ecuador vs Curaçao</td>
+    <td class="pred-score">5–0</td>
+    <td class="actual-score" data-actual="–">–</td>
+    <td class="pts-cell"><span class="pts-tbd">–</span></td>
+  </tr>
+<tr data-match="Tunisia vs Japan">
+    <td>Jun 21</td>
+    <td>Tunisia vs Japan</td>
+    <td class="pred-score">1–2</td>
+    <td class="actual-score" data-actual="–">–</td>
+    <td class="pts-cell"><span class="pts-tbd">–</span></td>
+  </tr>
+<tr data-match="Spain vs Saudi Arabia">
+    <td>Jun 21</td>
+    <td>Spain vs Saudi Arabia</td>
+    <td class="pred-score">4–0</td>
+    <td class="actual-score" data-actual="–">–</td>
+    <td class="pts-cell"><span class="pts-tbd">–</span></td>
+  </tr>
+<tr data-match="Belgium vs Iran">
+    <td>Jun 21</td>
+    <td>Belgium vs Iran</td>
+    <td class="pred-score">3–0</td>
+    <td class="actual-score" data-actual="–">–</td>
+    <td class="pts-cell"><span class="pts-tbd">–</span></td>
+  </tr>
+<tr data-match="Uruguay vs Cape Verde">
+    <td>Jun 22</td>
+    <td>Uruguay vs Cape Verde</td>
+    <td class="pred-score">4–0</td>
+    <td class="actual-score" data-actual="–">–</td>
+    <td class="pts-cell"><span class="pts-tbd">–</span></td>
+  </tr>
+<tr data-match="New Zealand vs Egypt">
+    <td>Jun 22</td>
+    <td>New Zealand vs Egypt</td>
+    <td class="pred-score">2–1</td>
+    <td class="actual-score" data-actual="–">–</td>
+    <td class="pts-cell"><span class="pts-tbd">–</span></td>
+  </tr>
+<tr data-match="Argentina vs Austria">
+    <td>Jun 22</td>
+    <td>Argentina vs Austria</td>
+    <td class="pred-score">3–0</td>
+    <td class="actual-score" data-actual="–">–</td>
+    <td class="pts-cell"><span class="pts-tbd">–</span></td>
+  </tr>
+<tr data-match="France vs Iraq">
+    <td>Jun 22</td>
+    <td>France vs Iraq</td>
+    <td class="pred-score">4–0</td>
+    <td class="actual-score" data-actual="–">–</td>
+    <td class="pts-cell"><span class="pts-tbd">–</span></td>
+  </tr>
+<tr data-match="Norway vs Senegal">
+    <td>Jun 23</td>
+    <td>Norway vs Senegal</td>
+    <td class="pred-score">1–1</td>
+    <td class="actual-score" data-actual="–">–</td>
+    <td class="pts-cell"><span class="pts-tbd">–</span></td>
+  </tr>
+<tr data-match="Jordan vs Algeria">
+    <td>Jun 23</td>
+    <td>Jordan vs Algeria</td>
+    <td class="pred-score">1–2</td>
+    <td class="actual-score" data-actual="–">–</td>
+    <td class="pts-cell"><span class="pts-tbd">–</span></td>
+  </tr>
+<tr data-match="Portugal vs Uzbekistan">
+    <td>Jun 23</td>
+    <td>Portugal vs Uzbekistan</td>
+    <td class="pred-score">4–0</td>
+    <td class="actual-score" data-actual="–">–</td>
+    <td class="pts-cell"><span class="pts-tbd">–</span></td>
+  </tr>
+<tr data-match="England vs Ghana">
+    <td>Jun 23</td>
+    <td>England vs Ghana</td>
+    <td class="pred-score">3–0</td>
+    <td class="actual-score" data-actual="–">–</td>
+    <td class="pts-cell"><span class="pts-tbd">–</span></td>
+  </tr>
+<tr data-match="Panama vs Croatia">
+    <td>Jun 24</td>
+    <td>Panama vs Croatia</td>
+    <td class="pred-score">0–2</td>
+    <td class="actual-score" data-actual="–">–</td>
+    <td class="pts-cell"><span class="pts-tbd">–</span></td>
+  </tr>
+<tr data-match="Colombia vs DR Congo">
+    <td>Jun 24</td>
+    <td>Colombia vs DR Congo</td>
+    <td class="pred-score">2–0</td>
+    <td class="actual-score" data-actual="–">–</td>
+    <td class="pts-cell"><span class="pts-tbd">–</span></td>
+  </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="scorecard-summary">
+    Total: <span id="total-pts">–</span> pts &nbsp;|&nbsp;
+    Exact: <span id="exact-count">0</span> &nbsp;|&nbsp;
+    Correct: <span id="result-count">0</span> &nbsp;|&nbsp;
+    Played: <span id="played-count">0</span>/24
+  </div>
+</section>
 </main>
 
 <footer>
